@@ -119,15 +119,7 @@ clear
 configure_networkmanager
 clear
 
-echo "Enabling other necessary services..."
-printf "\n"
-pacstrap /mnt 
-arch_chroot "systemctl enable bluetooth.service"
-printf "\n"
-echo "DONE!"
-printf "\n"
-read -p "press enter to continue..."
-sleep 2
+bluetooth_configure
 clear
 
 ## Generating the fstab
